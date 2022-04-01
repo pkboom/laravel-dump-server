@@ -1,0 +1,42 @@
+{
+    "name": "pkboom/laravel-dump-server",
+    "description": "Dump server",
+    "keywords": [
+        "pkboom",
+        "dump"
+    ],
+    "homepage": "https://github.com/pkboom/laravel-dump-server",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Keunbae Park",
+            "email": "ppotpo@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "illuminate/console": "^8.0|^9.0",
+        "illuminate/http": "^8.0|^9.0",
+        "illuminate/support": "^8.0|^9.0",
+        "react/event-loop": "^1.2",
+        "symfony/console": "^5.0|^6.0",
+        "symfony/finder": "^5.4|^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pkboom\\DumpServer\\": "src"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Pkboom\\DumpServer\\DumpServerServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
