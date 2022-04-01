@@ -15,11 +15,15 @@ class RequestContextProvider implements ContextProviderInterface
 
     private $cloner;
 
+    private $time;
+
     public function __construct(Request $currentRequest = null)
     {
         $this->currentRequest = $currentRequest;
         $this->cloner = new VarCloner();
         $this->cloner->setMaxItems(0);
+
+        $this->time = time();
     }
 
     public function getContext(): ?array
@@ -42,7 +46,7 @@ class RequestContextProvider implements ContextProviderInterface
             'uri' => $this->currentRequest->getUri(),
             'method' => $this->currentRequest->getMethod(),
             'controller' => $controller ? $this->cloner->cloneVar(class_basename($controller)) : $this->cloner->cloneVar(null),
-            'identifier' => md5($this->currentRequest->getUri()),
+            'identifier' => $this->time,
         ];
     }
 }
