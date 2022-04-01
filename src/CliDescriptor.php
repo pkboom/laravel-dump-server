@@ -22,7 +22,7 @@ class CliDescriptor implements DumpDescriptorInterface
         $this->dumper = $dumper;
     }
 
-    public function describe(OutputInterface $output, Data $data, array $context, int $clientId, bool $clear = null): void
+    public function describe(OutputInterface $output, Data $data, array $context, int $clientId): void
     {
         $io = $output instanceof SymfonyStyle ? $output : new SymfonyStyle(new ArrayInput([]), $output);
         $this->dumper->setColors($output->isDecorated());
@@ -44,6 +44,8 @@ class CliDescriptor implements DumpDescriptorInterface
         }
 
         if ($this->lastIdentifier !== $lastIdentifier) {
+            $io->write("\033\143");
+
             $io->section($section);
         }
 

@@ -1,16 +1,6 @@
-# Laravel Tinker On VSCode
+# Laravel Dump Server
 
-You can tinker with your application on vscode.
-
-<img src="/images/demo2.png" width="800"  title="demo">
-
-With query:
-
-<img src="/images/demo1.png" width="800"  title="demo">
-
-You can also output data to the console with `dd()` or `dump()`.
-
-<img src="/images/demo3.png" width="800">
+Inspired by [beyondcode/laravel-dump-server](https://github.com/beyondcode/laravel-dump-server)
 
 ## Installation
 
@@ -19,24 +9,6 @@ composer require pkboom/laravel-dump-server --dev
 ```
 
 ## Usage
-
-```bash
-php artisan dump-server
-```
-
-You can show queries.
-
-```bash
-php artisan dump-server --query
-```
-
-You can dump data to dump server.
-
-```bash
-php artisan dump-server --dump
-```
-
-If you only want to dump data,
 
 ```bash
 php artisan dump-server

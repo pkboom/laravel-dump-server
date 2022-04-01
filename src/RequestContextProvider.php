@@ -38,7 +38,6 @@ class RequestContextProvider implements ContextProviderInterface
             }
         }
 
-        
         return [
             'uri' => $this->currentRequest->getUri(),
             'method' => $this->currentRequest->getMethod(),
