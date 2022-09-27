@@ -16,6 +16,10 @@ class DumpServerServiceProvider extends ServiceProvider
                 DumpServerCommand::class,
             ]);
         }
+
+        $this->publishes([
+            __DIR__.'/../config/dump-server.php' => config_path('dump-server.php'),
+        ], 'config');
     }
 
     public function register()
