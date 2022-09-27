@@ -8,6 +8,12 @@ Inspired by [beyondcode/laravel-dump-server](https://github.com/beyondcode/larav
 composer require pkboom/laravel-dump-server --dev
 ```
 
+You can publish the config:
+
+```bash
+php artisan vendor:publish --provider="Pkboom\DumpServer\DumpServerServiceProvider" --tag="config"
+```
+
 ## Usage
 
 ```bash
